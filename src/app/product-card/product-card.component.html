@@ -1,0 +1,27 @@
+<div class="producto">
+    <div class="producto-image">
+        <img src="https://www.decantalo.com/es/58860-product_img/beronia-crianza.jpg"
+        alt="producto">
+    </div>
+    <div class="informacion-producto">
+        <h1 class="informacion-producto__title">Ribera del Duero</h1>
+        <p class="informacion-producto__descripcion">Vino tinto Denominación Origen Ribera del Duero
+        </p>    
+    </div>
+    <div class="acciones-producto">
+        <button (click)="buyProduct()" class="acciones-producto__btn comprar">Comprar</button>
+    <br/><br/><button class="acciones-producto__btn añadir">Añadir</button>
+    </div>
+</div>
+
+<form class="form" [style.display]="!formState ? 'none': 'flex'">
+
+    <h2>Datos de compra</h2>
+    <label for="address">Dirección</label>
+    <input type="text" name="address" id="address">
+    <label for="CP">Código Postal</label>
+    <input type="number" name="postalCode" id="CP">
+    <div class="actions">
+        <button type="submit">ORDER</button>
+    </div>
+</form>
